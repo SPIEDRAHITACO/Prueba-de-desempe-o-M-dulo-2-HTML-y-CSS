@@ -1,293 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexcent</title>
+    <!-- Google Fonts: Rubik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-
-
 </head>
 
 <body>
     <!-- ================== NAVBAR / HEADER ================== -->
-    <header class="header">  
+    <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <div class="logo-icon"></div>
-                
-                <img src="Images/Logo.png" alt="LogoNexcent" />
+                <img src="Images/Logo.png" alt="Nexcent Logo" />
             </div>
 
-            <nav class="nav">
-                <!-- href="#about" --- id="about" -->
+            <nav class="nav" id="nav-menu">
                 <a href="#about" class="nav-link">Home</a>
-                <a href="#features" class="nav-link">Feature</a>
-                <a href="#pricing" class="nav-link">Product</a>
-                <a href="#testimonials" class="nav-link">Testimonial</a>
-                <a href="#help" class="nav-link">FAQ</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#community" class="nav-link">Community</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <!-- Mobile Only Actions inside menu -->
+                <div class="mobile-actions">
+                    <a href="#" class="btn btn-primary">Register Now -></a>
+                </div>
             </nav>
 
-            <!-- Actions on the right: log in / register -->
             <div class="nav-actions">
-                <a href="#" class="btn-link">Login</a>
-                <!-- Button with border-->
-                <a href="#" class="btn btn-outline">Sign up</a>
+                <a href="#" class="btn btn-primary desktop-only">Register Now -></a>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- ================== HERO ================== -->
-     <section class="hero">
-        <div class="container hero-container">
-            <!-- Left column: text -->
-            <div class="hero-text">
-                <!-- Títle -->
-                <h1>Lessons and insights <span class="green.letter"></span> from 8 years</h1>
-
-                <p>
-                    Where to grow your business as a photographer: site or social media?
-                </p>
-                 <!-- Main call to action button -->
-                <a href="#" class="btn btn-primary hero-btn">Start</a>
-                            <div class="about-image">
-                <img src="Images/Illustration.png" alt="Sobre LaslesVPN" />
-                <div class="about-illustration"></div>
-            </div>
-               
-                <!-- three blocks -->
-                <div class="hero-stats">
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-user"></div>
-                        <div>
-                            <div class="stat-number">Membership Organisations</div>
-                            <div class="stat-label">Our membership management software provides full automation of membership renewals and payments</div>
-                        </div>
-                    </div>
-                    <!-- Vertical separator -->
-                    <div class="stat-divider"></div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-location"></div>
-                        <div>
-                            <div class="stat-number">National Associations</div>
-                            <div class="stat-label">Our membership management software provides full automation of membership renewals and payments</div>
-                        </div>
-                    </div>
-                    <!-- Vertical separator -->
-                    <div class="stat-divider"></div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-server"></div>
-                        <div>
-                            <div class="stat-number">Clubs And Groups</div>
-                            <div class="stat-label">Our membership management software provides full automation of membership renewals and payments</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-                <!-- ================== ABOUT ================== -->
-    <!-- id="about" so the menu can scroll to here -->
-    <section id="about" class="about">
-        <div class="container about-container">
-            
-            <div class="about-image">
-                
-                <img src="Images/Frame 35.png" alt="Sobre LaslesVPN" />
-                <div class="about-illustration"></div>
-            </div>
-
-            
-            <div class="about-text">
-                <h2>The unseen of spending three years at Pixelgrade</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. 
-                    Sed accumsan quam vitae est varius fringilla. 
-                    Pellentesque placerat vestibulum lorem sed porta. 
-                    Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. 
-                    Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
-                </p>
-            </div>
-
-             <!-- Main call to action button -->
-                <a href="#" class="btn btn-primary hero-btn">Learn More</a>
-        </div>
-    </section>
-
     <section class="hero">
         <div class="container hero-container">
-            
             <div class="hero-text">
-                 <!-- Block with 4 statistics -->
-                <div class="hero-stats">
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-user"></div>
-                        <div>
-                            <div class="stat-number">2.245.341</div>
-                            <div class="stat-label">Members</div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-divider"></div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-location"></div>
-                        <div>
-                            <div class="stat-number">46.328</div>
-                            <div class="stat-label">Cubs</div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-divider"></div>
-                   
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-server"></div>
-                        <div>
-                            <div class="stat-number">828,867</div>
-                            <div class="stat-label">Event Bookings</div>
-                        </div>
-                    
-                    <div class="stat-divider"></div>
-                    
-                    <div class="stat-item">
-                        <div class="stat-icon stat-icon-server"></div>
-                        <div>
-                            <div class="stat-number">1,926,436</div>
-                            <div class="stat-label">Payments</div>
-                    </div>
-                </div>
+                <h1>Lessons and insights <span class="primary-color">from 8 years</span></h1>
+                <p>Where to grow your business as a photographer: site or social media?</p>
+                <a href="#" class="btn btn-primary">Register</a>
             </div>
-
-            
             <div class="hero-image">
-                
-                <img src="Images/Icon.png" alt="Members" />
-                <div class="hero-illustration"></div>
+                <img src="Images/Illustration.png" alt="Hero Illustration" />
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container about-container">
-           
-            <div class="about-image">
-                
-                <img src="/home/cohorte5/Documentos/Prueba-de-desempe-o-M-dulo-2-HTML-y-CSS/Images/pana.png" alt="Sobre LaslesVPN" />
-                <div class="about-illustration"></div>
-            </div>
-
-            
-            <div class="about-text">
-                <h2>How to design your site footer like we did</h2>
-                <p>
-                    Donec a eros justo. Fusce egestas tristique ultrices. 
-                    Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. 
-                    Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus.
-                    In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. 
-                    Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.
-                </p>
-            </div>
-
-             
-                <a href="#" class="btn btn-primary hero-btn">Learn More</a>
-        </div>
-    </section>
-
-       <!-- ================== NETWORK ================== -->
-    <section class="network">
+    <!-- ================== OUR CLIENTS ================== -->
+    <section class="clients">
         <div class="container center">
             <div class="section-heading">
-                <p>
-                    Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
-                </p>
-                <h2>Tim Smith</h2>
-                <h3>British Dragon Boat Racing Association</h3>
-                <a href="#" class="btn btn-primary hero-btn">Meet all customers</a>
+                <h2>Our Clients</h2>
+                <p>We have been working with some Fortune 500+ clients</p>
+            </div>
+            <div class="clients-logos">
+                <img src="Images/Clients Logos.png" alt="Clients Logos" />
+                <!-- Ideally these should be individual SVGs or images for better responsiveness, but using the provided strip for now if individual ones aren't available -->
             </div>
         </div>
     </section>
 
-       <!-- ================== Information points ================== -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-heading center">
+    <!-- ================== MANAGE COMMUNITY (FEATURES) ================== -->
+    <section id="features" class="features">
+        <div class="container center">
+            <div class="section-heading">
+                <h2>Manage your entire community<br>in a single system</h2>
+                <p>Who is Nextcent suitable for?</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="Images/Icon.png" alt="Membership Organisations">
+                    </div>
+                    <h3>Membership Organisations</h3>
+                    <p>Our membership management software provides full automation of membership renewals and payments
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="Images/Icon(1).png" alt="National Associations">
+                    </div>
+                    <h3>National Associations</h3>
+                    <p>Our membership management software provides full automation of membership renewals and payments
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="Images/Icon(2).png" alt="Clubs And Groups">
+                    </div>
+                    <h3>Clubs And Groups</h3>
+                    <p>Our membership management software provides full automation of membership renewals and payments
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== UNLOCK (PIXELGRADE) ================== -->
+    <section class="unlock">
+        <div class="container split-container">
+            <div class="split-image">
+                <img src="Images/Frame 35.png" alt="Unlock Illustration" />
+            </div>
+            <div class="split-text">
+                <h2>The unseen of spending three years at Pixelgrade</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum.
+                    Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta.
+                    Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+                    Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== HELPING LOCAL (STATS) ================== -->
+    <section class="cod-stats">
+        <div class="container stats-container">
+            <div class="stats-header">
+                <h2>Helping a local <br><span class="primary-color">business reinvent itself</span></h2>
+                <p>We reached here with our hard work and dedication</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <img src="Images/Icon(3).png" alt="Members">
+                    <div>
+                        <h3>2,245,341</h3>
+                        <p>Members</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <img src="Images/Icon(4).png" alt="Clubs">
+                    <div>
+                        <h3>46,328</h3>
+                        <p>Clubs</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <img src="Images/Icon(5).png" alt="Event Bookings">
+                    <div>
+                        <h3>828,867</h3>
+                        <p>Event Bookings</p>
+                    </div>
+                </div>
+                <!-- Need a 4th icon if design shows 4, using Icon(5) duplicate or looking for another -->
+                <!-- Looking at file list, we have Icon(3), (4), (5). Maybe one is missing or reused. I'll reuse Icon(3) for now -->
+                <div class="stat-item">
+                    <img src="Images/Icon(3).png" alt="Payments">
+                    <div>
+                        <h3>1,926,436</h3>
+                        <p>Payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== CALENDAR (DESIGN FOOTER) ================== -->
+    <section class="calendar">
+        <div class="container split-container">
+            <div class="split-image">
+                <img src="Images/pana.png" alt="Calendar Illustration" />
+            </div>
+            <div class="split-text">
+                <h2>How to design your site footer like we did</h2>
+                <p>
+                    Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie,
+                    massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis.
+                    In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus.
+                </p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== CUSTOMERS ================== -->
+    <section class="customers">
+        <div class="container customers-container">
+            <img src="Images/66af9e158d309dd1704c49bad560036519bae324.jpg" alt="Tesla" class="customer-image" />
+            <!-- Assuming Frame 10 might be the image, or part of it. Using Frame 10 from list -->
+            <div class="customer-content">
+                <p>
+                    Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus
+                    tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+                    enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec
+                    molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales.
+                    Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim
+                    sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero
+                    condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                </p>
+                <h4>Tim Smith</h4>
+                <p class="customer-role">British Dragon Boat Racing Association</p>
+
+                <div class="customer-logos-row">
+                    <!-- Placeholder logos, can reuse client logos or icons -->
+                    <img src="Images/Logo.png" alt="Logo" style="height: 30px; filter: grayscale(100%); opacity: 0.5;">
+                    <img src="Images/Logo.png" alt="Logo" style="height: 30px; filter: grayscale(100%); opacity: 0.5;">
+                    <img src="Images/Logo.png" alt="Logo" style="height: 30px; filter: grayscale(100%); opacity: 0.5;">
+                    <img src="Images/Logo.png" alt="Logo" style="height: 30px; filter: grayscale(100%); opacity: 0.5;">
+                    <a href="#" class="btn-link">Meet all customers -></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== COMMUNITY UPDATES ================== -->
+    <section id="blog" class="community-updates">
+        <div class="container center">
+            <div class="section-heading">
                 <h2>Caring is the new marketing</h2>
                 <p>
-                    The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​
+                    The Nexcent blog is the best place to read about the latest membership insights, trends and more.
+                    See who's joining the community, read about how our community are increasing their membership income
+                    and lot's more.
                 </p>
             </div>
 
-            
-            <div class="testimonials-grid">
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar"></div>
-                        <div>
-                            <div class="testimonial-name">Creating Streamlined Safeguarding Processes with OneRen</div>
-                            <button class="btn-texto">Readmore</button>
-                        </div>
+            <div class="updates-grid">
+                <div class="update-card">
+                    <div class="update-image"
+                        style="background-image: url('Images/5b68113ad80dfca071d88cdc680544ed9cbcf9ed.jpg');">
+                    </div>
+                    <div class="update-content">
+                        <h3>Creating Streamlined Safeguarding Processes with OneRen</h3>
+                        <a href="#" class="btn-link">Readmore -></a>
                     </div>
                 </div>
 
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar"></div>
-                        <div>
-                            <div class="testimonial-name">What are your safeguarding responsibilities and how can you manage them?</div>
-                            <button class="btn-texto">Readmore</button>
-                        </div>
+                <div class="update-card">
+                    <div class="update-image"
+                        style="background-image: url('Images/7776b16fd94779a6038df61ab3795e3388d1c731.jpg');">
+                    </div>
+                    <div class="update-content">
+                        <h3>What are your safeguarding responsibilities and how can you manage them?</h3>
+                        <a href="#" class="btn-link">Readmore -></a>
                     </div>
                 </div>
 
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar"></div>
-                        <div>
-                            <div class="testimonial-name">Revamping the Membership Model with Triathlon Australia</div>
-                            <button class="btn-texto">Readmore</button>
-                        </div>
+                <div class="update-card">
+                    <div class="update-image"
+                        style="background-image: url('Images/a353eb29cb260e5e45b8deb813272ee1a31ac6f1.jpg');">
                     </div>
+                    <div class="update-content">
+                        <h3>Revamping the Membership Model with Triathlon Australia</h3>
+                        <a href="#" class="btn-link">Readmore -></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ================== CTA ================== -->
-    <section class="cta">
-        <div class="container cta-container">
-            <div>
-                <h2>Pellentesque suscipit fringilla libero eu.</h2>
-            </div>
-            <a href="#" class="btn btn-primary">Get a demo</a>
+    <!-- ================== PRE-FOOTER ================== -->
+    <section class="pre-footer center">
+        <div class="container">
+            <h1>Pellentesque suscipit <br> fringilla libero eu.</h1>
+            <a href="#" class="btn btn-primary">Get a Demo -></a>
         </div>
     </section>
 
-    <!-- ================== FOOTER  ================== -->
-    <footer id="help" class="footer">
+    <!-- ================== FOOTER ================== -->
+    <footer class="footer">
         <div class="container footer-container">
-            
             <div class="footer-brand">
                 <div class="logo">
-                    <div class="logo-icon"></div>
-                    <span class="logo-text">Nexcent</span>
+                    <img src="Images/Logo.png" alt="Nexcent Logo" style="filter: brightness(0) invert(1);" />
+                    <!-- Assuming dark footer, logo needs to be white -->
                 </div>
-                
-               
-            <div>
-                <p class="footer-copy">
-                    ©Copyright @ 2020 Nexcent ltd.
-                    All rights reserved
-                </p>
+                <div class="copyright">
+                    <p>Copyright © 2020 Nexcent ltd.</p>
+                    <p>All rights reserved</p>
+                </div>
+                <div class="socials">
+                    <a href="#" class="social-icon">I</a>
+                    <a href="#" class="social-icon">D</a>
+                    <a href="#" class="social-icon">Tw</a>
+                    <a href="#" class="social-icon">Yt</a>
+                </div>
             </div>
 
-            
-            <div class="footer-links">
+            <div class="footer-links-group">
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="#">About us</a>
@@ -306,10 +312,25 @@
                 </div>
                 <div class="footer-col">
                     <h4>Stay up to date</h4>
-                    
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your email address" />
+                        <button type="submit"><img src="Images/Vector.png" alt="Send"></button>
+                    </form>
                 </div>
             </div>
         </div>
     </footer>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>

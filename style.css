@@ -1,725 +1,720 @@
+/* ================== VARIABLES ================== */
+:root {
+    --primary: #4CAF4F;
+    --secondary: #263238;
+    --text-gray: #717171;
+    --text-dark: #4D4D4D;
+    --neutral-silver: #F5F7FA;
+    --neutral-white: #FFFFFF;
+    --neutral-black: #263238;
+    --bg-light: #F5F7FA;
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+    /* Typography */
+    --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ================== RESET ================== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-
 
 body {
-    font-family: "Rubik", system-ui, -apple-system, Heading, sans-serif;
-    color: #4D4D4D;
-    
-    background-color: #ffffff;
-    
+    font-family: var(--font-family);
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--neutral-white);
 }
 
-/* ================== UTILITYS ================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1.25;
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================== UTILITIES ================== */
 .container {
-    width: 100%;
-    max-width: 1024px;
-    
+    max-width: 1140px;
     margin: 0 auto;
-    
     padding: 0 16px;
-    
 }
-
 
 .center {
     text-align: center;
 }
 
-
-.section-heading {
-    margin-bottom: 40px;
+.primary-color {
+    color: var(--primary);
 }
 
-.section-heading h2 {
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 16px;
-}
-
-.section-heading p {
-    font-size: 14px;
-    color: #4f5665;
-    /* Color de texto gris */
-}
-
-/* ================== BOTONS ================== */
-
-
+/* Buttons */
 .btn {
-    display: inline-flex;
-    background-color: #4CAF4F;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 32px;
-    border-radius: 5px;
-    
-    font-weight: 550;
-    font-size: 14px;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
     cursor: pointer;
+    transition: all 0.3s;
     border: none;
-    text-decoration: none;
-    
-    transition: all 0.2s ease;
-    
+    white-space: nowrap;
 }
-
 
 .btn-primary {
-    background-color: #4CAF4F;
-    color: #ffffff;
-    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.35);
-    
+    background-color: var(--primary);
+    color: white;
 }
-
 
 .btn-primary:hover {
-    background-color: #4CAF4F;
+    background-color: #388E3C;
 }
 
-
-
-/* Hover para botón con borde */
-.btn-outline:hover {
-    background-color: #4CAF4F;
-    color: #ffffff;
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
 }
 
-/* Link tipo botón simple (solo texto) */
 .btn-link {
-    text-decoration: none;
-    color: #0b132a;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.btn-link:hover {
-    color: #4CAF4F;
-}
-
-
-.full {
-    width: 100%;
-}
-
-/* ================== HEADER / NAVBAR ================== */
-
-
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    
-    background-color: #ffffff;
-}
-
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 16px;
-}
-
-
-.logo {
-    display: flex;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
 }
 
-
-.logo-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, #4CAF4F #ffffff);
+.btn-link:hover {
+    text-decoration: underline;
 }
 
-
-.logo-text {
-    font-weight: 700;
-    font-size: 20px;
+/* Headings */
+.section-heading {
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+/* ================== HEADER ================== */
+.header {
+    background-color: var(--neutral-white);
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for sticky header */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+}
 
 .nav {
     display: flex;
-    gap: 24px;
-
+    gap: 40px;
 }
-
 
 .nav-link {
-    font-size: 14px;
-    text-decoration: none;
-    color: #4f5665;
+    color: var(--text-dark);
+    font-weight: 400;
+    /* Regular */
+    font-size: 16px;
 }
 
-.nav-link:hover {
-    color: #fdfdfd;
+.nav-link:hover,
+.nav-link.active {
+    font-weight: 500;
+    color: var(--text-dark);
 }
-
 
 .nav-actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+/* ================== HERO ================== */
+.hero {
+    background-color: var(--bg-light);
+    padding: 96px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    line-height: 76px;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+}
+
+.hero-text p {
+    margin-bottom: 32px;
+    color: var(--text-gray);
+    font-size: 16px;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+/* ================== CLIENTS ================== */
+.clients {
+    padding: 40px 0;
+    background-color: white;
+}
+
+.clients .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.clients h2 {
+    font-size: 36px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.clients p {
+    color: var(--text-gray);
+    margin-bottom: 16px;
+}
+
+.clients-logos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.clients-logos img {
+    /* If using the strip, just max-width */
+    max-width: 100%;
+}
+
+/* ================== FEATURES ================== */
+.features {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+    /* Large gap as per design */
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(171, 190, 209, 0.2);
+    /* In design, cards might not have visible shadow until hover or plain. 
+       Actually design shows them quite clean. */
+    box-shadow: none;
+}
+
+.feature-icon {
+    width: 65px;
+    height: 56px;
+    margin: 0 auto 16px;
+    position: relative;
+}
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-card h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* ================== UNLOCK & CALENDAR (Split Sections) ================== */
+.unlock,
+.calendar {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.split-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* Image smaller than text area usually, or similar */
+    align-items: center;
+    gap: 50px;
+}
+
+.unlock .split-container {
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.split-text h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.split-text p {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 32px;
+    text-align: justify;
+}
+
+/* ================== STATS (Helping Local) ================== */
+.cod-stats {
+    background-color: var(--bg-light);
+    padding: 64px 0;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.stats-header h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 30px;
+}
+
+.stat-item {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-/* ================== HERO ================== */
-
-.hero {
-    padding: 60px 0 120px;
-   
+.stat-item img {
+    width: 48px;
+    height: 48px;
 }
 
-
-.hero-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-    align-items: center;
-   
-    gap: 100px;
-    
+.stat-item h3 {
+    font-size: 28px;
+    color: var(--text-dark);
 }
 
-.hero-text h1 {
-    font-size: 42px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-}
-
-.hero-text p {
+.stat-item p {
     font-size: 16px;
-    color: #4f5665;
-    margin-bottom: 24px;
-    max-width: 480px;
-   
+    color: var(--text-gray);
 }
 
-.hero-btn {
-    margin-bottom: 40px;
+/* ================== CUSTOMERS ================== */
+.customers {
+    padding: 50px 0;
+    background-color: var(--bg-light);
+    /* Actually design might be white? Let's check. 
+    It looks like light gray in some shots. I'll stick to F5F7FA (bg-light) for contrast if needed, 
+    but Figma screenshot looks white actually? Let's assume white based on 'Customers' usually being distinct. 
+    Wait, the screenshot 'image 9' is Tesla which is usually grey bg. */
+    background-color: var(--bg-light);
 }
 
-
-.hero-image {
-    display: flex;
-    justify-content: right;
-}
-
-
-.hero-illustration {
-    width: 100%;
-    max-width: 320;
-    height: 320px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #e0f5ff, #ffffff);
-    border: 1px solid #dde0e4;
-}
-
-/* ================== HERO STATS ================== */
-
-
-.hero-stats {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    padding: 50px 100px;
-    border-radius: 16px;
-    border: 1px solid #dde0e4;
-    box-shadow: 0 20px 50px rgba(13, 16, 37, 0.08);
-    max-width: 560px;
-}
-
-
-.stat-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.stat-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 999px;
-    background-color: #ffecec;
-}
-
-
-.stat-icon-user::before,
-.stat-icon-location::before,
-.stat-icon-server::before {
-    content: "";
-    display: block;
-    width: 18px;
-    height: 18px;
-    border-radius: 999px;
-    margin: 11px;
-    background-color: #ffffff;
-}
-
-.stat-number {
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.stat-label {
-    font-size: 12px;
-    color: #4f5665;
-}
-
-
-.stat-divider {
-    width: 1px;
-    height: 50px;
-    background-color: #eeeeee;
-}
-
-/* ================== ABOUT ================== */
-
-.about {
-    padding: 40px 0 80px;
-}
-
-
-.about-container {
+.customers-container {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-columns: 0.8fr 2fr;
+    gap: 80px;
     align-items: center;
-    gap: 60px;
 }
 
-
-.about-illustration {
+.customer-image {
     width: 100%;
-    max-width: 420px;
-    height: 320px;
-    border-radius: 24px;
-    background: linear-gradient(135deg, #fff4e6, #ffffff);
-    border: 1px solid #dde0e4;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(171, 190, 209, 0.4);
 }
 
-.about-text h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
-}
-
-.about-text p {
-    font-size: 14px;
-    color: #4f5665;
-    margin-bottom: 16px;
-}
-
-
-.about-list {
-    list-style: none;
-  
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    font-size: 14px;
-    color: #4f5665;
-}
-
-
-.check-icon {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border-radius: 999px;
-    margin-right: 8px;
-    background-color: #2fab73;
-    position: relative;
-    vertical-align: middle;
-}
-
-
-.check-icon::after {
-    content: "";
-    position: absolute;
-    left: 5px;
-    top: 3px;
-    width: 7px;
-    height: 11px;
-    border: solid #ffffff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-/* ================== FEATURES GRID ================== */
-
-.features {
-    padding: 40px 0 80px;
-    background-color: #fafafa;
-  
-}
-
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-}
-
-
-.feature-card {
-    padding: 24px 20px;
-    border-radius: 16px;
-    border: 1px solid #dde0e4;
-    background-color: #ffffff;
-    text-align: left;
-}
-
-
-.feature-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
-    background-color: #ffecec;
-    margin-bottom: 16px;
-}
-
-.feature-card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.feature-card p {
-    font-size: 14px;
-    color: #4f5665;
-}
-
-/* ================== NETWORK SECTION ================== */
-
-.network {
-    padding: 40px 0 80px;
-}
-
-.network-map {
-    margin-top: 24px;
-    margin-bottom: 32px;
-}
-
-/* Cuadro que simula el mapa */
-.map-placeholder {
-    width: 100%;
-    height: 260px;
-    border-radius: 24px;
-    border: 1px dashed #dde0e4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #4f5665;
-    font-size: 18px;
-}
-
-/* Logos de compañías asociadas */
-.network-logos {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos bajen de línea */
-    justify-content: center;
-    gap: 24px;
-}
-
-/* Cada logo es una píldora con borde */
-.logo-placeholder {
-    min-width: 100px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    border: 1px solid #dde0e4;
-    color: #4f5665;
-    font-size: 14px;
-}
-
-/* ================== TESTIMONIALS ================== */
-
-.testimonials {
-    padding: 40px 0 80px;
-    background-color: #fafafa;
-}
-
-/* Grid de 3 columnas de testimonios */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-}
-
-/* Tarjeta de testimonio */
-.testimonial-card {
-    border-radius: 16px;
-    border: 1px solid #dde0e4;
-    padding: 24px 20px;
-    background-color: #ffffff;
-}
-
-/* Cabecera del testimonio (avatar + nombre + rating) */
-.testimonial-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-/* Avatar circular con degradado (no imagen real) */
-.avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #4CAF4F, #4CAF4F);
-}
-
-/* Nombre y ubicación del usuario */
-.testimonial-name {
+.customer-content p {
+    font-size: 16px;
     font-weight: 500;
-    font-size: 14px;
-}
-
-.testimonial-location {
-    font-size: 12px;
-    color: #4f5665;
-}
-
-/* Rating alineado a la derecha */
-.testimonial-rating {
-    margin-left: auto;
-    /* Empuja el rating a la derecha */
-    font-size: 14px;
-    color: #0b132a;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-/* Cuadradito amarillo que simula una estrella */
-.star-icon {
-    width: 14px;
-    height: 14px;
-    background-color: #4CAF4F;
-    border-radius: 4px;
-}
-
-/* Texto del testimonio */
-.testimonial-text {
-    font-size: 14px;
-    color: #4f5665;
+    color: var(--text-gray);
+    margin-bottom: 16px;
     line-height: 1.5;
 }
 
-/* ================== CTA ================== */
-
-.cta {
-    padding: 40px 0 60px;
-}
-
-/* Caja con sombra que contiene el mensaje final y el botón */
-.cta-container {
-    border-radius: 16px;
-    padding: 32px 40px;
-    background-color: #ffffff;
-    box-shadow: 0 20px 60px rgba(13, 16, 37, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-.cta-container h2 {
-    font-size: 24px;
+.customer-content h4 {
+    color: var(--primary);
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
-.cta-container p {
-    font-size: 14px;
-    color: #4f5665;
+.customer-role {
+    color: #89939E;
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.customer-logos-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.customer-logos-row img {
+    height: 40px;
+    width: auto;
+}
+
+/* ================== COMMUNITY UPDATES ================== */
+.community-updates {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.updates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.update-card {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(171, 190, 209, 0.4);
+    background: white;
+    padding-bottom: 24px;
+    /* Space for content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-image {
+    width: 100%;
+    height: 286px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* The card content actually floats over the image in some designs, 
+   but in the simple view it looks like a card below. 
+   Wait, the Figma design usually has a floating white card overlapping correctly. 
+   Let's approximate that 'floating card' look. */
+
+.update-card {
+    /* Resetting for specific layout */
+    box-shadow: none;
+    background: transparent;
+    padding-bottom: 0;
+    display: block;
+}
+
+.update-content {
+    background: white;
+    margin: -60px 20px 0;
+    /* overlap */
+    position: relative;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(171, 190, 209, 0.4);
+    text-align: center;
+}
+
+.update-content h3 {
+    font-size: 20px;
+    color: var(--text-gray);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* ================== PRE-FOOTER ================== */
+.pre-footer {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.pre-footer h1 {
+    font-size: 64px;
+    margin-bottom: 32px;
+    color: #263238;
 }
 
 /* ================== FOOTER ================== */
-
 .footer {
-    padding: 40px 0;
-    background-color: #f8f8f8;
+    background-color: var(--neutral-black);
+    color: white;
+    padding: 64px 0;
 }
 
-/* Grid de 2 columnas:
-   - Izquierda: texto y redes
-   - Derecha: columnas de links */
 .footer-container {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
-    gap: 40px;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
 }
 
-.footer-brand p {
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin-top: 40px;
     font-size: 14px;
-    color: #4f5665;
-    margin-top: 12px;
-    max-width: 320px;
+    color: #F5F7FA;
+    opacity: 0.7;
 }
 
-/* Redes sociales en fila */
 .socials {
     display: flex;
-    gap: 12px;
-    margin: 16px 0;
+    gap: 16px;
+    margin-top: 40px;
 }
 
-/* Cada icono social es un círculo */
 .social-icon {
     width: 32px;
     height: 32px;
-    border-radius: 999px;
-    background-color: #ffffff;
-    border: 1px solid #dde0e4;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    color: #4f5665;
-}
-
-/* Texto de copyright */
-.footer-copy {
+    transition: 0.3s;
+    color: white;
     font-size: 12px;
-    color: #afb5c0;
 }
 
-/* Contenedor de las columnas de links */
-.footer-links {
+.social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-links-group {
     display: flex;
-    gap: 60px;
-    flex-wrap: wrap;
-    /* Si no hay espacio, pasan a segunda línea */
+    justify-content: space-between;
+    gap: 30px;
 }
 
-/* Títulos de cada columna */
 .footer-col h4 {
-    font-size: 16px;
-    margin-bottom: 12px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 24px;
 }
 
-/* Estilos de los enlaces del footer */
 .footer-col a {
     display: block;
-    text-decoration: none;
+    color: #F5F7FA;
     font-size: 14px;
-    color: #4f5665;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    opacity: 0.7;
 }
 
 .footer-col a:hover {
-    color: #f53838;
+    opacity: 1;
 }
 
+.subscribe-form {
+    position: relative;
+    max-width: 260px;
+}
 
+.subscribe-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+}
+
+.subscribe-form input::placeholder {
+    color: #D9DBE1;
+}
+
+.subscribe-form button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================== RESPONSIVE ================== */
 @media (max-width: 992px) {
-  
-    .nav {
-        display: none;
-    }
 
-   
     .hero-container,
-    .about-container {
-        grid-template-columns: minmax(0, 1fr);
+    .split-container,
+    .stats-container,
+    .customers-container,
+    .footer-container {
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 40px;
     }
 
-    
-    .hero-text p,
-    .about-text p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    
-    .hero-stats {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-   
-    .about-text {
-        order: 2;
-    }
-
-    .about-image {
-        order: 1;
+    .hero-image {
+        order: -1;
+        /* Image on top on mobile often looks better, or leave details */
+        justify-content: center;
         display: flex;
+    }
+
+    .stats-grid {
         justify-content: center;
     }
 
-    
-    .features-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Navigation - Mobile Menu */
+    .menu-toggle {
+        display: block;
+        /* Show hamburger */
     }
 
-    .pricing-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .desktop-only {
+        display: none;
+        /* Hide desktop register button */
     }
 
-    .testimonials-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-  
-    .footer-container {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    
-    .cta-container {
+    .nav {
+        position: fixed;
+        top: 80px;
+        /* Header height approx */
+        left: 0;
+        width: 100%;
+        background-color: white;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
+        /* Center items visually */
+        padding: 40px 0;
+        gap: 24px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        /* Hide upwards */
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav.active {
+        display: flex;
+        /* Override display: none from potential cascade issues if any, but flex is needed */
+        transform: translateY(0);
+        /* Slide down */
+    }
+
+    .mobile-actions {
+        display: block;
+        margin-top: 16px;
+    }
+
+    .features-grid,
+    .updates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .customer-logos-row {
+        justify-content: center;
     }
 }
 
+/* Base styles for hamburger (hidden on desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-@media (max-width: 480px) {
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
 
-    .hero-container,
-    .about-container {
-        gap: 32px;
-    }
+/* Hamburger animation */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
 
-    .hero-text h1 {
-        font-size: 32px;
-        
-    }
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
 
-    
-    .features-grid,
-    .pricing-grid,
-    .testimonials-grid {
-        grid-template-columns: minmax(0, 1fr);
-    }
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 
-    
-    .hero-stats {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .stat-divider {
-        display: none;
-        
-    }
-
-    
-    .cta-container {
-        padding: 24px 20px;
-    }
+.mobile-actions {
+    display: none;
+    /* Hidden by default */
 }
